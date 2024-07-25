@@ -17,3 +17,6 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/posts', [PostController::class, 'index']);
+
+// 「/posts/1」のように可変の値を含むURLにアクセスした際、PostControllerのshowアクションが実行されるようルーティングを設定
+Route::get('/posts/{id}', [PostController::class, 'show']);
